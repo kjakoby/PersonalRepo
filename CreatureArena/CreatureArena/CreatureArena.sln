@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.8
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatureArena.UI", "CreatureArena.UI\CreatureArena.UI.csproj", "{9BE88991-3442-4436-8F3D-022121057E0F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatureArena.UI", "CreatureArena.UI\CreatureArena.UI.csproj", "{8CD15566-FE33-4A53-A683-8825A291B157}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9BE88991-3442-4436-8F3D-022121057E0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9BE88991-3442-4436-8F3D-022121057E0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9BE88991-3442-4436-8F3D-022121057E0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9BE88991-3442-4436-8F3D-022121057E0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CD15566-FE33-4A53-A683-8825A291B157}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CD15566-FE33-4A53-A683-8825A291B157}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CD15566-FE33-4A53-A683-8825A291B157}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CD15566-FE33-4A53-A683-8825A291B157}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {4D4DF9B1-E81E-40E6-B9E4-80D4AE4270C8}
+		SolutionGuid = {82F18935-DC20-4CD8-9644-46EB337DBE7E}
 	EndGlobalSection
 EndGlobal
