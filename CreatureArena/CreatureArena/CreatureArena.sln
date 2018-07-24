@@ -5,6 +5,12 @@ VisualStudioVersion = 15.0.26730.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatureArena.UI", "CreatureArena.UI\CreatureArena.UI.csproj", "{8CD15566-FE33-4A53-A683-8825A291B157}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatureArena.Data", "CreatureArena.Data\CreatureArena.Data.csproj", "{287B634B-7B68-4947-96C0-783FCFBEACA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatureArena.Models", "CreatureArena.Models\CreatureArena.Models.csproj", "{FC53A144-37CB-4A76-B58B-0D67255C7445}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatureArena.Tests", "CreatureArena.Tests\CreatureArena.Tests.csproj", "{C82EC10F-3B80-4316-9E03-056C9FAF9AC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{8CD15566-FE33-4A53-A683-8825A291B157}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CD15566-FE33-4A53-A683-8825A291B157}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CD15566-FE33-4A53-A683-8825A291B157}.Release|Any CPU.Build.0 = Release|Any CPU
+		{287B634B-7B68-4947-96C0-783FCFBEACA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{287B634B-7B68-4947-96C0-783FCFBEACA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{287B634B-7B68-4947-96C0-783FCFBEACA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{287B634B-7B68-4947-96C0-783FCFBEACA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC53A144-37CB-4A76-B58B-0D67255C7445}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC53A144-37CB-4A76-B58B-0D67255C7445}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC53A144-37CB-4A76-B58B-0D67255C7445}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC53A144-37CB-4A76-B58B-0D67255C7445}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C82EC10F-3B80-4316-9E03-056C9FAF9AC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C82EC10F-3B80-4316-9E03-056C9FAF9AC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C82EC10F-3B80-4316-9E03-056C9FAF9AC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C82EC10F-3B80-4316-9E03-056C9FAF9AC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
