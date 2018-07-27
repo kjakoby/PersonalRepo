@@ -26,6 +26,8 @@ textarea {
 .jumbotron {
     font-size:90px;
 }
-/*#jumboText {
-    font-size:200px;
-}*/
+
+.nav-item {
+    font-size:30px;
+}
+
