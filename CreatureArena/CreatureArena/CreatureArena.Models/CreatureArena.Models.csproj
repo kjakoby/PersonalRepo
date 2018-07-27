@@ -41,6 +41,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queries\AllCreaturesItem.cs" />
+    <Compile Include="Tables\Attack.cs" />
+    <Compile Include="Tables\Creature.cs" />
+    <Compile Include="Tables\CreatureAttacks.cs" />
+    <Compile Include="Tables\Enviro.cs" />
+    <Compile Include="Tables\Type.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

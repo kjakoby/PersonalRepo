@@ -301,6 +301,16 @@
       <DependentUpon>201807232053437_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CreatureArena.Data\CreatureArena.Data.csproj">
+      <Project>{287B634B-7B68-4947-96C0-783FCFBEACA8}</Project>
+      <Name>CreatureArena.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CreatureArena.Models\CreatureArena.Models.csproj">
+      <Project>{fc53a144-37cb-4a76-b58b-0d67255c7445}</Project>
+      <Name>CreatureArena.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

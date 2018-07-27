@@ -1,7 +1,41 @@
-﻿
+﻿@model IEnumerable<CreatureArena.Models.Queries.AllCreaturesItem>
+
 @{
-    ViewBag.Title = "AllCreatures";
+    ViewBag.Title = "Creature Directory";
 }
 
-<h2>AllCreatures</h2>
+<div class="mt-3">
+    <div class="row mb-6">
+        <h2>AllCreatures</h2>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <table class="mb-3 col-lg-12">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>HP</th>
+                        <th>Type</th>
+                        <th>Strength</th>
+                        <th>Weakness</th>
+                        <th>Boss?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.CreatureName</td>
+                            <td>@item.CreatureHP</td>
+                            <td>@item.TypeName</td>
+                            <td>@item.StrengthName</td>
+                            <td>@item.WeaknessName</td>
+                            <td>@((item.Boss)?"Yes":"No")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CreatureArena.Data.Factories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,9 @@ namespace CreatureArena.UI.Controllers
         // GET: Directory
         public ActionResult AllCreatures()
         {
-            return View();
+            var repo = CreatureRepoFactory.GetRepo();
+            var model = repo.GetCreatureDirectory().ToList();
+            return View(model);
         }
 
         public ActionResult Creature(int id)
