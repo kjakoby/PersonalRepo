@@ -31,5 +31,10 @@ namespace CreatureArena.Data.ADO
         {
             throw new NotImplementedException();
         }
+
+        public IEnumerable<BossCreatures> GetBosses()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

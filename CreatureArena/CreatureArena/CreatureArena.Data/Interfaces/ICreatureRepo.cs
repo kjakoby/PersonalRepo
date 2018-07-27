@@ -14,5 +14,6 @@ namespace CreatureArena.Data.Interfaces
         Creature GetByID(int creatureID);
         IEnumerable<AllCreaturesItem> GetCreatureDirectory();
         AllCreaturesItem GetSingleCreature(int creatureID);
+        IEnumerable<BossCreatures> GetBosses();
     }
 }
