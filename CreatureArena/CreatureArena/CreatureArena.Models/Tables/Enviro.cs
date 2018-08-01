@@ -11,5 +11,6 @@ namespace CreatureArena.Models.Tables
         public int EnviroID { get; set; }
         public string EnviroName { get; set; }
         public string EnviroPic { get; set; }
+        public int TypeID { get; set; }
     }
 }
