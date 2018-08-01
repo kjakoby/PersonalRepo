@@ -27,5 +27,125 @@ namespace CreatureArena.Tests
                 cmd.ExecuteNonQuery();
             }
         }
+
+        [Test]
+        public void ADOCanLoadCreatureTable()
+        {
+
+        }
+
+        [Test]
+        public void ADOCanLoadCreatureAttacksTable()
+        {
+
+        }
+
+        [Test]
+        public void ADOCanLoadAttackTable()
+        {
+
+        }
+
+        [Test]
+        public void ADOCanLoadEnviroTable()
+        {
+
+        }
+
+        [Test]
+        public void ADOCanLoadTypeTable()
+        {
+
+        }
+
+        [Test]
+        public void ADOCanGetAllCreatures()
+        {
+
+        }
+
+        [Test]
+        public void ADOCanGetSingleCreatureByID(int creatureID)
+        {
+
+        }
+
+        [Test]
+        public void ADOCanGetCreaturesByTypeID(int typeID)
+        {
+
+        }
+
+        [Test]
+        public void ADOCanGetAllBosses()
+        {
+
+        }
+
+        [Test]
+        public void ADOCanGetAllAttacks()
+        {
+
+        }
+
+        [Test]
+        public void ADOCanGetSingleAttackByID(int attackID)
+        {
+
+        }
+
+        [Test]
+        public void ADOCanGetAttacksByTypeID(int typeID)
+        {
+
+        }
+
+        [Test]
+        public void ADOCanGetAllTypes()
+        {
+
+        }
+
+        [Test]
+        public void ADOCanGetSingleTypeByID(int typeID)
+        {
+
+        }
+
+        [Test]
+        public void ADOCanGetAllEnviros()
+        {
+
+        }
+
+        [Test]
+        public void ADOCanGetSingleEnviroByID(int enviroID)
+        {
+
+        }
+
+        [Test]
+        public void ADOCanGetSingleEnviroByTypeID(int typeID)
+        {
+
+        }
+
+        [Test]
+        public void ADOCanGetAllCreatureAttacks()
+        {
+
+        }
+
+        [Test]
+        public void ADOCanGetCreatureAttacksByCreatureID(int creatureID)
+        {
+
+        }
+
+        [Test]
+        public void ADOCanGetCreatureAttacksByAttackID(int attackID)
+        {
+
+        }
     }
 }

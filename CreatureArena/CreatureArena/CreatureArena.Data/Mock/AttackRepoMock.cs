@@ -12,8 +12,16 @@ namespace CreatureArena.Data.Mock
     {
         private static List<Attack> _attacks = new List<Attack>
         {
-            //new Attack
-            //{AttackID=1, AttackName="MockAName1", AttackDamage=1, TypeID= }
+            new Attack
+            {AttackID=1, AttackName="MockAName1", AttackDamage=1},
+            new Attack
+            {AttackID=1, AttackName="MockAName1", AttackDamage=1},
+            new Attack
+            {AttackID=1, AttackName="MockAName1", AttackDamage=1},
+            new Attack
+            {AttackID=1, AttackName="MockAName1", AttackDamage=1},
+            new Attack
+            {AttackID=1, AttackName="MockAName1", AttackDamage=1}
         };
 
         public List<Attack> GetAll()
@@ -23,7 +31,14 @@ namespace CreatureArena.Data.Mock
 
         public Attack GetByID(int attackID)
         {
-            throw new NotImplementedException();
+            if (_attacks.Where(a => a.AttackID == attackID).Count() == 0)
+            {
+                return null;
+            }
+            else
+            {
+                return _attacks.FirstOrDefault(a => a.AttackID == attackID);
+            }
         }
     }
 }

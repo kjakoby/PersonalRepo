@@ -36,5 +36,20 @@ namespace CreatureArena.Data.ADO
         {
             throw new NotImplementedException();
         }
+
+        public AllCreaturesItem GetSingleCreatureByID(int creatureID)
+        {
+            throw new NotImplementedException();
+        }
+
+        public AllCreaturesItem GetCreaturesByTypeID(int typeID)
+        {
+            throw new NotImplementedException();
+        }
+
+        public DetailedCreatureItem GetDetailedCreatureByID(int creatureID)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

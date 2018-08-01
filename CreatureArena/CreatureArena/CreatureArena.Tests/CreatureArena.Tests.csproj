@@ -95,6 +95,16 @@
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CreatureArena.Data\CreatureArena.Data.csproj">
+      <Project>{287B634B-7B68-4947-96C0-783FCFBEACA8}</Project>
+      <Name>CreatureArena.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CreatureArena.Models\CreatureArena.Models.csproj">
+      <Project>{FC53A144-37CB-4A76-B58B-0D67255C7445}</Project>
+      <Name>CreatureArena.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
