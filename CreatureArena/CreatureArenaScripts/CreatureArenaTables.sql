@@ -55,6 +55,7 @@ CREATE TABLE CreatureAttacks (
 CREATE TABLE Environment (
 	EnviroID INT NOT NULL primary key identity(1,1),
 	EnviroName varchar(50) NOT NULL,
-	EnviroPic varchar(50) NOT NULL
+	EnviroPic varchar(50) NOT NULL,
+	TypeID INT NOT NULL foreign key references [Type](TypeID)
 );
 
