@@ -11,5 +11,6 @@ namespace CreatureArena.Data.Interfaces
     {
         List<Enviro> GetAll();
         Enviro GetByID(int creatureID);
+        Enviro GetByTypeID(int typeID);
     }
 }

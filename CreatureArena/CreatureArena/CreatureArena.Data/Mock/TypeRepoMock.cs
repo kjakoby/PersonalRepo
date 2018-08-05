@@ -13,11 +13,11 @@ namespace CreatureArena.Data.Mock
         private static List<Models.Tables.Type> _types = new List<Models.Tables.Type>
         {
             new Models.Tables.Type
-            {TypeID=1, TypeName="MockTName1", TypeIcon="MockTIcon1", TypeStrength=2, TypeWeakness=3},
+            {TypeID=1, TypeName="MockTName1", TypeIcon="MockType.jpg", TypeStrength=2, TypeWeakness=3},
             new Models.Tables.Type
-            {TypeID=2, TypeName="MockTName2", TypeIcon="MockTIcon2", TypeStrength=3, TypeWeakness=1},
+            {TypeID=2, TypeName="MockTName2", TypeIcon="MockType.jpg", TypeStrength=3, TypeWeakness=1},
             new Models.Tables.Type
-            {TypeID=3, TypeName="MockTName3", TypeIcon="MockTIcon3", TypeStrength=1, TypeWeakness=2}
+            {TypeID=3, TypeName="MockTName3", TypeIcon="MockType.jpg", TypeStrength=1, TypeWeakness=2}
         };
 
         public List<Models.Tables.Type> GetAll()

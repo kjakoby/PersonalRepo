@@ -19,5 +19,10 @@ namespace CreatureArena.Data.ADO
         {
             throw new NotImplementedException();
         }
+
+        public IEnumerable<Attack> GetByTypeID(int typeID)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

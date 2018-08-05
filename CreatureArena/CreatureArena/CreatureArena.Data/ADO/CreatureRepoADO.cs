@@ -42,7 +42,7 @@ namespace CreatureArena.Data.ADO
             throw new NotImplementedException();
         }
 
-        public AllCreaturesItem GetCreaturesByTypeID(int typeID)
+        public IEnumerable<AllCreaturesItem> GetCreaturesByTypeID(int typeID)
         {
             throw new NotImplementedException();
         }

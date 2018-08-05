@@ -13,15 +13,17 @@ namespace CreatureArena.Data.Mock
         private static List<Attack> _attacks = new List<Attack>
         {
             new Attack
-            {AttackID=1, AttackName="MockAName1", AttackDamage=1},
+            {AttackID=1, AttackName="MockAName1", AttackDamage=10, TypeID=1},
             new Attack
-            {AttackID=1, AttackName="MockAName1", AttackDamage=1},
+            {AttackID=2, AttackName="MockAName2", AttackDamage=20, TypeID=1},
             new Attack
-            {AttackID=1, AttackName="MockAName1", AttackDamage=1},
+            {AttackID=3, AttackName="MockAName3", AttackDamage=10, TypeID=2},
             new Attack
-            {AttackID=1, AttackName="MockAName1", AttackDamage=1},
+            {AttackID=4, AttackName="MockAName4", AttackDamage=20, TypeID=2},
             new Attack
-            {AttackID=1, AttackName="MockAName1", AttackDamage=1}
+            {AttackID=5, AttackName="MockAName5", AttackDamage=10, TypeID=3},
+            new Attack
+            {AttackID=6, AttackName="MockAName6", AttackDamage=20, TypeID=3}
         };
 
         public List<Attack> GetAll()
@@ -38,6 +40,18 @@ namespace CreatureArena.Data.Mock
             else
             {
                 return _attacks.FirstOrDefault(a => a.AttackID == attackID);
+            }
+        }
+
+        public IEnumerable<Attack> GetByTypeID(int typeID)
+        {
+            if (_attacks.Where(a => a.TypeID == typeID).Count() == 0)
+            {
+                return null;
+            }
+            else
+            {
+                return _attacks.Where(a => a.TypeID == typeID).ToList();
             }
         }
     }

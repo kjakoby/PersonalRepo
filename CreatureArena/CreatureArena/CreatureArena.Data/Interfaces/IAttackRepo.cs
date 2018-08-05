@@ -11,5 +11,6 @@ namespace CreatureArena.Data.Interfaces
     {
         List<Attack> GetAll();
         Attack GetByID(int attackID);
+        IEnumerable<Attack> GetByTypeID(int typeID);
     }
 }

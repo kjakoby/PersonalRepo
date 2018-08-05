@@ -17,84 +17,90 @@ namespace CreatureArena.Tests
         public void MockCanGetAllCreatures()
         {
             var repo = new CreatureRepoMock();
-            var creaturesList = repo.GetCreatureDirectory().ToList();
+            var creatureList = repo.GetCreatureDirectory().ToList();
 
-            Assert.AreEqual(3, creaturesList.Count());
-            Assert.AreEqual(2, creaturesList[1].CreatureID);
-            Assert.AreEqual("MockCName3", creaturesList[2].CreatureName);
-            Assert.AreEqual(1, creaturesList[0].TypeID);
-            Assert.AreEqual("MockTName2", creaturesList[1].TypeName);
-            Assert.AreEqual(100, creaturesList[2].CreatureHP);
-            Assert.AreEqual(true, creaturesList[0].Boss);
-            Assert.AreEqual(3, creaturesList[1].StrengthID);
-            Assert.AreEqual(3, creaturesList[0].WeaknessID);
-            Assert.AreEqual("MockStrength3", creaturesList[2].StrengthName);
-            Assert.AreEqual("MockWeakness1", creaturesList[0].WeaknessName);
+            Assert.AreEqual(3, creatureList.Count());
+            Assert.AreEqual(2, creatureList[1].CreatureID);
+            Assert.AreEqual("MockCName3", creatureList[2].CreatureName);
+            Assert.AreEqual(1, creatureList[0].TypeID);
+            Assert.AreEqual("MockTName2", creatureList[1].TypeName);
+            Assert.AreEqual(100, creatureList[2].CreatureHP);
+            Assert.AreEqual(true, creatureList[0].Boss);
+            Assert.AreEqual(3, creatureList[1].StrengthID);
+            Assert.AreEqual(3, creatureList[0].WeaknessID);
+            Assert.AreEqual("MockStrength3", creatureList[2].StrengthName);
+            Assert.AreEqual("MockWeakness1", creatureList[0].WeaknessName);
         }
 
         [Test]
         public void MockCanGetSingleCreatureByID()
         {
             var repo = new CreatureRepoMock();
-            var creatureToTest = repo.GetSingleCreatureByID(3);
+            var foundCreature = repo.GetSingleCreatureByID(3);
 
-            Assert.AreEqual(3, creatureToTest.CreatureID);
-            Assert.AreEqual("MockCName3", creatureToTest.CreatureName);
-            Assert.AreEqual(3, creatureToTest.TypeID);
-            Assert.AreEqual("MockTName3", creatureToTest.TypeName);
-            Assert.AreEqual(100, creatureToTest.CreatureHP);
-            Assert.AreEqual(true, creatureToTest.Boss);
-            Assert.AreEqual(1, creatureToTest.StrengthID);
-            Assert.AreEqual(2, creatureToTest.WeaknessID);
-            Assert.AreEqual("MockStrength3", creatureToTest.StrengthName);
-            Assert.AreEqual("MockWeakness3", creatureToTest.WeaknessName);
+            Assert.AreEqual(3, foundCreature.CreatureID);
+            Assert.AreEqual("MockCName3", foundCreature.CreatureName);
+            Assert.AreEqual(3, foundCreature.TypeID);
+            Assert.AreEqual("MockTName3", foundCreature.TypeName);
+            Assert.AreEqual(100, foundCreature.CreatureHP);
+            Assert.AreEqual(true, foundCreature.Boss);
+            Assert.AreEqual(1, foundCreature.StrengthID);
+            Assert.AreEqual(2, foundCreature.WeaknessID);
+            Assert.AreEqual("MockStrength3", foundCreature.StrengthName);
+            Assert.AreEqual("MockWeakness3", foundCreature.WeaknessName);
         }
 
         [Test]
         public void MockCanGetCreaturesByTypeID()
         {
-            //need to add .ToList() to method after chaning method to allow for multiples
-
             var repo = new CreatureRepoMock();
-            var creaturesList = repo.GetCreaturesByTypeID(2);
+            var creatureList = repo.GetCreaturesByTypeID(2).ToList();
 
-            //Assert.AreEqual(3, creaturesList.Count());
-            //Assert.AreEqual(3, creatureToTest.CreatureID);
-            //Assert.AreEqual("MockCName3", creatureToTest.CreatureName);
-            //Assert.AreEqual(3, creatureToTest.TypeID);
-            //Assert.AreEqual("MockTName3", creatureToTest.TypeName);
-            //Assert.AreEqual(100, creatureToTest.CreatureHP);
-            //Assert.AreEqual(true, creatureToTest.Boss);
-            //Assert.AreEqual(1, creatureToTest.StrengthID);
-            //Assert.AreEqual(2, creatureToTest.WeaknessID);
-            //Assert.AreEqual("MockStrength3", creatureToTest.StrengthName);
-            //Assert.AreEqual("MockWeakness3", creatureToTest.WeaknessName);
+            Assert.AreEqual(1, creatureList.Count());
+            Assert.AreEqual(2, creatureList[0].CreatureID);
+            Assert.AreEqual("MockCName2", creatureList[0].CreatureName);
+            Assert.AreEqual(2, creatureList[0].TypeID);
+            Assert.AreEqual("MockTName2", creatureList[0].TypeName);
+            Assert.AreEqual(100, creatureList[0].CreatureHP);
+            Assert.AreEqual(true, creatureList[0].Boss);
+            Assert.AreEqual(3, creatureList[0].StrengthID);
+            Assert.AreEqual(1, creatureList[0].WeaknessID);
+            Assert.AreEqual("MockStrength2", creatureList[0].StrengthName);
+            Assert.AreEqual("MockWeakness2", creatureList[0].WeaknessName);
         }
 
         [Test]
         public void MockCanGetDetailedCreature()
         {
-            //need to complete
-
             var repo = new CreatureRepoMock();
-            var creatureToTest = repo.GetDetailedCreatureByID(1);
+            var foundCreature = repo.GetDetailedCreatureByID(1);
 
-            //Assert.AreEqual(3, creatureToTest.CreatureID);
-            //Assert.AreEqual("MockCName3", creatureToTest.CreatureName);
-            //Assert.AreEqual(3, creatureToTest.TypeID);
-            //Assert.AreEqual("MockTName3", creatureToTest.TypeName);
-            //Assert.AreEqual(100, creatureToTest.CreatureHP);
-            //Assert.AreEqual(true, creatureToTest.Boss);
-            //Assert.AreEqual(1, creatureToTest.StrengthID);
-            //Assert.AreEqual(2, creatureToTest.WeaknessID);
-            //Assert.AreEqual("MockStrength3", creatureToTest.StrengthName);
-            //Assert.AreEqual("MockWeakness3", creatureToTest.WeaknessName);
+            Assert.AreEqual(1, foundCreature.CreatureID);
+            Assert.AreEqual("MockCName1", foundCreature.CreatureName);
+            Assert.AreEqual(1, foundCreature.TypeID);
+            Assert.AreEqual("MockTName1", foundCreature.TypeName);
+            Assert.AreEqual(100, foundCreature.CreatureHP);
+            Assert.AreEqual(true, foundCreature.Boss);
+            Assert.AreEqual(2, foundCreature.StrengthID);
+            Assert.AreEqual(3, foundCreature.WeaknessID);
+            Assert.AreEqual("MockStrength1", foundCreature.StrengthName);
+            Assert.AreEqual("MockWeakness1", foundCreature.WeaknessName);
+            Assert.AreEqual("MockCreature.jpg", foundCreature.CreaturePic);
+            Assert.AreEqual("MockInfo1MockInfo1MockInfo1MockInfo1MockInfo1", foundCreature.CreatureInfo);
         }
 
         [Test]
         public void MockCanGetAllBosses()
         {
-            throw new NotImplementedException();
+            var repo = new CreatureRepoMock();
+            var bossList = repo.GetBosses().ToList();
+
+            Assert.AreEqual(3, bossList.Count());
+            Assert.AreEqual(1, bossList[0].CreatureID);
+            Assert.AreEqual("MockCName4", bossList[2].CreatureName);
+            Assert.AreEqual("MockCreature.jpg", bossList[1].CreaturePic);
+            Assert.AreEqual("MockInfo1MockInfo1MockInfo1MockInfo1MockInfo1", bossList[0].CreatureInfo);
+            Assert.AreEqual(true, bossList[1].Boss);
         }
 
         //attack tests--------------------------------------------------------------------------------------
@@ -102,19 +108,39 @@ namespace CreatureArena.Tests
         [Test]
         public void MockCanGetAllAttacks()
         {
-            throw new NotImplementedException();
+            var repo = new AttackRepoMock();
+            var attackList = repo.GetAll();
+
+            Assert.AreEqual(6, attackList.Count());
+            Assert.AreEqual(1, attackList[0].AttackID);
+            Assert.AreEqual("MockAName4", attackList[3].AttackName);
+            Assert.AreEqual(20, attackList[5].AttackDamage);
+            Assert.AreEqual(2, attackList[2].TypeID);
         }
 
         [Test]
         public void MockCanGetSingleAttackByID()
         {
-            throw new NotImplementedException();
+            var repo = new AttackRepoMock();
+            var foundAttack = repo.GetByID(3);
+
+            Assert.AreEqual(3, foundAttack.AttackID);
+            Assert.AreEqual("MockAName3", foundAttack.AttackName);
+            Assert.AreEqual(10, foundAttack.AttackDamage);
+            Assert.AreEqual(2, foundAttack.TypeID);
         }
 
         [Test]
         public void MockCanGetAttacksByTypeID()
         {
-            throw new NotImplementedException();
+            var repo = new AttackRepoMock();
+            var attackList = repo.GetByTypeID(2).ToList();
+
+            Assert.AreEqual(2, attackList.Count());
+            Assert.AreEqual(3, attackList[0].AttackID);
+            Assert.AreEqual("MockAName4", attackList[1].AttackName);
+            Assert.AreEqual(20, attackList[1].AttackDamage);
+            Assert.AreEqual(2, attackList[0].TypeID);
         }
 
         //type tests----------------------------------------------------------------------------------------
@@ -123,27 +149,27 @@ namespace CreatureArena.Tests
         public void MockCanGetAllTypes()
         {
             var repo = new TypeRepoMock();
-            var typesList = repo.GetAll().ToList();
+            var typeList = repo.GetAll().ToList();
 
-            Assert.AreEqual(3, typesList.Count());
-            Assert.AreEqual(2, typesList[1].TypeID);
-            Assert.AreEqual("MockTName3", typesList[2].TypeName);
-            Assert.AreEqual("MockTIcon1", typesList[0].TypeIcon);
-            Assert.AreEqual(3, typesList[1].TypeStrength);
-            Assert.AreEqual(3, typesList[0].TypeWeakness);
+            Assert.AreEqual(3, typeList.Count());
+            Assert.AreEqual(2, typeList[1].TypeID);
+            Assert.AreEqual("MockTName3", typeList[2].TypeName);
+            Assert.AreEqual("MockType.jpg", typeList[0].TypeIcon);
+            Assert.AreEqual(3, typeList[1].TypeStrength);
+            Assert.AreEqual(3, typeList[0].TypeWeakness);
         }
 
         [Test]
         public void MockCanGetSingleTypeByID()
         {
             var repo = new TypeRepoMock();
-            var typeToTest = repo.GetByID(2);
+            var foundType = repo.GetByID(2);
 
-            Assert.AreEqual(2, typeToTest.TypeID);
-            Assert.AreEqual("MockTName2", typeToTest.TypeName);
-            Assert.AreEqual("MockTIcon2", typeToTest.TypeIcon);
-            Assert.AreEqual(3, typeToTest.TypeStrength);
-            Assert.AreEqual(1, typeToTest.TypeWeakness);
+            Assert.AreEqual(2, foundType.TypeID);
+            Assert.AreEqual("MockTName2", foundType.TypeName);
+            Assert.AreEqual("MockType.jpg", foundType.TypeIcon);
+            Assert.AreEqual(3, foundType.TypeStrength);
+            Assert.AreEqual(1, foundType.TypeWeakness);
         }
 
         //enviro tests--------------------------------------------------------------------------------------
@@ -151,19 +177,38 @@ namespace CreatureArena.Tests
         [Test]
         public void MockCanGetAllEnviros()
         {
-            throw new NotImplementedException();
+            var repo = new EnviroRepoMock();
+            var enviroList = repo.GetAll();
+
+            Assert.AreEqual(3, enviroList.Count());
+            Assert.AreEqual(2, enviroList[1].EnviroID);
+            Assert.AreEqual("MockEName1", enviroList[0].EnviroName);
+            Assert.AreEqual("MockEnviro.jpg", enviroList[2].EnviroPic);
+            Assert.AreEqual(1, enviroList[0].TypeID);
         }
 
         [Test]
         public void MockCanGetSingleEnviroByID()
         {
-            throw new NotImplementedException();
+            var repo = new EnviroRepoMock();
+            var foundEnviro = repo.GetByID(2);
+            
+            Assert.AreEqual(2, foundEnviro.EnviroID);
+            Assert.AreEqual("MockEName2", foundEnviro.EnviroName);
+            Assert.AreEqual("MockEnviro.jpg", foundEnviro.EnviroPic);
+            Assert.AreEqual(2, foundEnviro.TypeID);
         }
 
         [Test]
         public void MockCanGetSingleEnviroByTypeID()
         {
-            throw new NotImplementedException();
+            var repo = new EnviroRepoMock();
+            var foundEnviro = repo.GetByTypeID(2);
+
+            Assert.AreEqual(2, foundEnviro.EnviroID);
+            Assert.AreEqual("MockEName2", foundEnviro.EnviroName);
+            Assert.AreEqual("MockEnviro.jpg", foundEnviro.EnviroPic);
+            Assert.AreEqual(2, foundEnviro.TypeID);
         }
 
         //creature attack tests-----------------------------------------------------------------------------
@@ -189,57 +234,78 @@ namespace CreatureArena.Tests
         //null tests----------------------------------------------------------------------------------------
 
         [Test]
-        public void MockNoCreatureByID()
+        public void MockNoCreatureByInvalidID()
+        {
+            var repo = new CreatureRepoMock();
+            var foundCreature = repo.GetSingleCreatureByID(999999);
+
+            Assert.IsNull(foundCreature);
+        }
+
+        [Test]
+        public void MockNoCreaturesByInvalidTypeID()
+        {
+            var repo = new CreatureRepoMock();
+            var creatureList = repo.GetCreaturesByTypeID(999999);
+
+            Assert.IsNull(creatureList);
+        }
+
+        [Test]
+        public void MockNoAttackByInvalidID()
+        {
+            var repo = new AttackRepoMock();
+            var foundAttack = repo.GetByID(999999);
+
+            Assert.IsNull(foundAttack);
+        }
+
+        [Test]
+        public void MockNoAttacksByInvalidTypeID()
+        {
+            var repo = new AttackRepoMock();
+            var attackList = repo.GetByTypeID(999999);
+
+            Assert.IsNull(attackList);
+        }
+
+        [Test]
+        public void MockNoCreatureAttacksByInvalidCreatureID()
         {
             throw new NotImplementedException();
         }
 
         [Test]
-        public void MockNoCreaturesByTypeID()
+        public void MockNoCreatureAttacksByInvalidAttackID()
         {
             throw new NotImplementedException();
         }
 
         [Test]
-        public void MockNoAttackByID()
+        public void MockNoTypeByInvalidID()
         {
-            throw new NotImplementedException();
+            var repo = new TypeRepoMock();
+            var foundType = repo.GetByID(999999);
+
+            Assert.IsNull(foundType);
         }
 
         [Test]
-        public void MockNoAttacksByTypeID()
+        public void MockNoEnviroByInvalidID()
         {
-            throw new NotImplementedException();
+            var repo = new EnviroRepoMock();
+            var foundEnviro = repo.GetByID(999999);
+
+            Assert.IsNull(foundEnviro);
         }
 
         [Test]
-        public void MockNoCreatureAttacksByCreatureID()
+        public void MockNoEnviroByInvalidTypeID()
         {
-            throw new NotImplementedException();
-        }
+            var repo = new EnviroRepoMock();
+            var foundEnviro = repo.GetByTypeID(999999);
 
-        [Test]
-        public void MockNoCreatureAttacksByAttackID()
-        {
-            throw new NotImplementedException();
-        }
-
-        [Test]
-        public void MockNoTypeByID()
-        {
-            throw new NotImplementedException();
-        }
-
-        [Test]
-        public void MockNoEnviroByID()
-        {
-            throw new NotImplementedException();
-        }
-
-        [Test]
-        public void MockNoEnvirosByTypeID()
-        {
-            throw new NotImplementedException();
+            Assert.IsNull(foundEnviro);
         }
     }
 }
