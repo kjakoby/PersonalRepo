@@ -82,3 +82,29 @@ GO
 --EXEC TypeSelectAll
 
 ----------------------------------------------------------------------
+
+IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.ROUTINES
+	WHERE ROUTINE_NAME = 'CreatureDetails')
+		DROP PROCEDURE CreatureDetails
+GO
+
+CREATE PROCEDURE CreatureDetails(
+	@CreatureID INT
+		) AS
+BEGIN
+	SELECT CreatureID, CreatureName, C.TypeID, T.TypeName, CreatureHP, Boss, CreaturePic, CreatureInfo, T.TypeStrength, T.TypeWeakness, T2.TypeName AS Strength, T3.TypeName AS Weakness
+	FROM Creature AS C
+		INNER JOIN [Type] AS T ON 
+			 T.TypeID = C.TypeID
+		INNER JOIN [Type] AS T2 ON
+			T2.TypeID = T.TypeStrength
+		INNER JOIN [Type] AS T3 ON
+			T3.TypeID = T.TypeWeakness
+	WHERE CreatureID = @CreatureID
+END
+GO
+
+--EXEC CreatureDetails
+
+----------------------------------------------------------------------
+
