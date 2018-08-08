@@ -216,19 +216,40 @@ namespace CreatureArena.Tests
         [Test]
         public void MockCanGetAllCreatureAttacks()
         {
-            throw new NotImplementedException();
+            var repo = new CreatureAttacksRepoMock();
+            var creatureAttacksList = repo.GetAll();
+
+            Assert.AreEqual(12, creatureAttacksList.Count());
+            Assert.AreEqual(2, creatureAttacksList[5].CreatureID);
+            Assert.AreEqual(3, creatureAttacksList[2].AttackID);
+            Assert.AreEqual(2, creatureAttacksList[6].CreatureID);
+            Assert.AreEqual(6, creatureAttacksList[9].AttackID);
         }
 
         [Test]
         public void MockCanGetCreatureAttacksByCreatureID()
         {
-            throw new NotImplementedException();
+            var repo = new CreatureAttacksRepoMock();
+            var creatureAttacksList = repo.GetByCreatureID(3).ToList();
+
+            Assert.AreEqual(4, creatureAttacksList.Count());
+            Assert.AreEqual(3, creatureAttacksList[1].CreatureID);
+            Assert.AreEqual(1, creatureAttacksList[2].AttackID);
+            Assert.AreEqual(3, creatureAttacksList[0].CreatureID);
+            Assert.AreEqual(3, creatureAttacksList[3].AttackID);
         }
 
         [Test]
         public void MockCanGetCreatureAttacksByAttackID()
         {
-            throw new NotImplementedException();
+            var repo = new CreatureAttacksRepoMock();
+            var creatureAttacksList = repo.GetByAttackID(5).ToList();
+
+            Assert.AreEqual(3, creatureAttacksList.Count());
+            Assert.AreEqual(1, creatureAttacksList[0].CreatureID);
+            Assert.AreEqual(5, creatureAttacksList[2].AttackID);
+            Assert.AreEqual(2, creatureAttacksList[1].CreatureID);
+            Assert.AreEqual(5, creatureAttacksList[1].AttackID);
         }
 
         //null tests----------------------------------------------------------------------------------------
@@ -272,13 +293,19 @@ namespace CreatureArena.Tests
         [Test]
         public void MockNoCreatureAttacksByInvalidCreatureID()
         {
-            throw new NotImplementedException();
+            var repo = new CreatureAttacksRepoMock();
+            var creatureAttacksList = repo.GetByCreatureID(999999);
+
+            Assert.IsNull(creatureAttacksList);
         }
 
         [Test]
         public void MockNoCreatureAttacksByInvalidAttackID()
         {
-            throw new NotImplementedException();
+            var repo = new CreatureAttacksRepoMock();
+            var creatureAttacksList = repo.GetByAttackID(999999);
+
+            Assert.IsNull(creatureAttacksList);
         }
 
         [Test]

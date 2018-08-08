@@ -15,7 +15,12 @@ namespace CreatureArena.Data.ADO
             throw new NotImplementedException();
         }
 
-        public CreatureAttacks GetByCreatureID(int creatureID)
+        public IEnumerable<CreatureAttacks> GetByAttackID(int attackID)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<CreatureAttacks> GetByCreatureID(int creatureID)
         {
             throw new NotImplementedException();
         }

@@ -10,6 +10,7 @@ namespace CreatureArena.Data.Interfaces
     public interface ICreatureAttacksRepo
     {
         List<CreatureAttacks> GetAll();
-        CreatureAttacks GetByCreatureID(int creatureID);
+        IEnumerable<CreatureAttacks> GetByCreatureID(int creatureID);
+        IEnumerable<CreatureAttacks> GetByAttackID(int attackID);
     }
 }
