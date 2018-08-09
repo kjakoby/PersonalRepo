@@ -11,6 +11,8 @@ namespace CreatureArena.Data.ADO
 {
     public class CreatureRepoADO : ICreatureRepo
     {
+        //Data same as Creature Table--------------------------------------------------
+
         public List<Creature> GetAll()
         {
             throw new NotImplementedException();
@@ -21,15 +23,12 @@ namespace CreatureArena.Data.ADO
             throw new NotImplementedException();
         }
 
+        //More/Less data than in Creature Table-----------------------------------------
+
         public IEnumerable<AllCreaturesItem> GetCreatureDirectory()
         {
             throw new NotImplementedException();
 
-        }
-
-        public AllCreaturesItem GetSingleCreature(int creatureID)
-        {
-            throw new NotImplementedException();
         }
 
         public IEnumerable<BossCreatures> GetBosses()
